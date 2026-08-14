@@ -1,15 +1,23 @@
 package com.vinieduoliveira.ecommerce.common;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import org.hibernate.annotations.ValueGenerationType;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
-//Every entity inherits from it
+@MappedSuperclass
 public class BaseModel implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
 
 

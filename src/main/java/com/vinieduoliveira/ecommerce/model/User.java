@@ -1,7 +1,10 @@
 package com.vinieduoliveira.ecommerce.model;
 
 import com.vinieduoliveira.ecommerce.common.BaseModel;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "tb_user")
 public class User extends BaseModel {
 
     private String name;
